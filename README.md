@@ -18,3 +18,25 @@ Based on the official images:
 ## Installation
 
 Just clone this repository to your docker machine.
+
+## How to start
+
+Start docker-elk using *docker-compose*:
+
+```bash
+$ docker-compose up
+```
+
+Start docker-elk in detached mode:
+
+```bash
+$ docker-compose up -d
+```
+
+## How to inject logs
+
+Provided logstash configuration allows you to send content via tcp:
+
+```bash
+$ nc localhost 5000 < /path/to/logfile.log
+```
