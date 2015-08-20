@@ -40,3 +40,19 @@ Provided logstash configuration allows you to send content via tcp:
 ```bash
 $ nc localhost 5000 < /path/to/logfile.log
 ```
+
+## Resume
+
+Kibana UI is accessible at [http://localhost:5601](http://localhost:5601).
+
+By default,  the following ports:
+
+* 5000: Logstash TCP input.
+* 9200: Elasticsearch HTTP (with Marvel plugin accessible via [http://localhost:9200/_plugin/marvel](http://localhost:9200/_plugin/marvel))
+* 5601: Kibana 4 web interface
+
+## Further configuration
+
+* Kibana default configuration is stored in `kibana/config/kibana.yml`.
+* logstash configuration is stored in `logstash/config/logstash.conf`.
+* Elasticsearch container is using the shipped configuration and it is not exposed by default.
